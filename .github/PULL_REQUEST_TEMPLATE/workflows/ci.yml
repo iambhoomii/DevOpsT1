@@ -1,0 +1,28 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Verify Dockerfile Exists
+        run: test -f Dockerfile
+
+      - name: Verify README Exists
+        run: test -f README.md
+
+      - name: Success
+        run: echo "Build and validation completed successfully!"
