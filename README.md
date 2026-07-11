@@ -37,6 +37,17 @@ http://localhost:8080
 If everything is working, you'll see the web page running from the Docker container.
 CI verification
 
+## Terraform Commands
+
+```bash
+terraform init
+terraform plan
+terraform apply
+terraform destroy
+```
+
+These commands are used to initialize Terraform, review the execution plan, create or update infrastructure, and safely destroy the resources when they are no longer needed.
+
 ## Author
 
 Bhoomi
